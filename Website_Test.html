@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Henri Graul</title>
+<meta name="description" content="Henri Graul is a PhD student in Economics at Bocconi University working on theoretical and empirical macroeconomics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1f2430;
+    --ink-soft: #666d7a;
+    --rule: #e4e6ea;
+    --link: #1f4e79;
+    --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16191f; --ink: #e6e4df; --ink-soft: #a3a8b1; --rule: #2b3039; --link: #8db3d6;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16191f; --ink: #e6e4df; --ink-soft: #a3a8b1; --rule: #2b3039; --link: #8db3d6;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 0.16em; text-decoration-thickness: 1px; }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+
+  .page { max-width: 42rem; margin: 0 auto; padding: 5rem 1.5rem 5rem; }
+
+  header { display: flex; gap: 2.5rem; align-items: flex-start; }
+  .who { flex: 1; min-width: 0; }
+  h1 { font-size: 2.4rem; font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; margin: 0 0 1.1rem; }
+  .who p { margin: 0 0 0.9rem; }
+  .who p:last-child { margin-bottom: 0; }
+
+  .portrait {
+    flex: 0 0 10.5rem;
+    width: 10.5rem;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+  }
+  .portrait--placeholder {
+    display: grid; place-items: center;
+    background: var(--rule); color: var(--ink-soft);
+    font-style: italic; font-size: 0.95rem;
+  }
+
+  .links { margin: 1.4rem 0 0; color: var(--ink-soft); font-size: 1rem; }
+  .links a + a::before { content: "\00a0\00a0"; }
+  .links .sep { margin: 0 0.6rem; }
+
+  section { margin-top: 3.5rem; }
+  h2 {
+    font-size: 1.05rem; font-weight: 500; color: var(--ink-soft);
+    margin: 0 0 1.25rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule);
+  }
+  h3 { font-size: 1.2rem; font-weight: 500; line-height: 1.35; margin: 0; }
+  .paper { margin-bottom: 1.75rem; }
+  .paper .meta { margin: 0.2rem 0 0; color: var(--ink-soft); font-size: 1rem; }
+
+  details { margin-top: 0.5rem; }
+  summary {
+    cursor: pointer; list-style: none; color: var(--ink-soft); font-size: 1rem; width: max-content;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "▸"; display: inline-block; margin-right: 0.4rem; transition: transform 120ms ease; }
+  details[open] summary::before { transform: rotate(90deg); }
+  summary:hover { color: var(--ink); }
+  details p { margin: 0.6rem 0 0; font-size: 1.05rem; line-height: 1.6; }
+
+  .teaching { margin: 0; }
+  .teaching dt { font-weight: 500; margin-top: 1.1rem; }
+  .teaching dt:first-child { margin-top: 0; }
+  .teaching dd { margin: 0.3rem 0 0; }
+  .teaching dd span { color: var(--ink-soft); font-size: 1rem; }
+
+  address { font-style: normal; line-height: 1.55; }
+  address p { margin: 0 0 0.9rem; }
+  address p:last-child { margin-bottom: 0; }
+
+  footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 0.9rem; }
+
+  @media (max-width: 600px) {
+    .page { padding: 3rem 1.25rem 4rem; }
+    header { flex-direction: column-reverse; gap: 1.25rem; }
+    .portrait { width: 7.5rem; flex-basis: auto; margin-top: 0; }
+    h1 { font-size: 2rem; }
+    body { font-size: 1.08rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { summary::before { transition: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="who">
+      <h1>Henri Graul</h1>
+      <p>I am a fourth-year PhD student in Economics at <a href="https://www.unibocconi.eu/en">Bocconi University</a>. My research is in macroeconomics, both theoretical and empirical.</p>
+      <p>Before Bocconi I obtained an MSc in Economics from the London School of Economics and a BSc in Economics from the University of Mannheim.</p>
+      <p class="links">
+        <a href="mailto:henri.graul@phd.unibocconi.it">henri.graul@phd.unibocconi.it</a>
+        <span class="sep">·</span><a href="#">CV</a>
+        <span class="sep">·</span><a href="https://www.linkedin.com/in/henri-graul-2001b2175/">LinkedIn</a>
+      </p>
+    </div>
+    <div class="portrait portrait--placeholder" role="img" aria-label="Portrait placeholder">photo</div>
+  </header>
+
+  <section id="research">
+    <h2>Work in progress</h2>
+
+    <article class="paper">
+      <h3>Uninsured Creative Destruction</h3>
+      <p class="meta">with <a href="https://www.matteosamarani.com/home-page">Matteo Samarani</a></p>
+      <details>
+        <summary>Abstract</summary>
+        <p>We propose a theory of creative destruction under incomplete markets. At its core is the observation that creative destruction shapes workers’ labor income process. When displaced workers are the economy’s savers, displacement risk moves the demand for assets and, with it, the return at which innovation is financed. In a quality-ladder model, households self-insure with a liquid bond and the stock that finances entrants. Because the stock provides worse insurance against unemployment, it pays a liquidity premium that moves firms’ discount rate and, through free entry, the pace of creative destruction. Incomplete markets can accelerate or slow creative destruction relative to complete markets, depending on whether the precautionary motive or the liquidity channel prevails. Creative destruction rises with consumption inequality, implying a trade-off between reducing inequality and sustaining growth.</p>
+      </details>
+    </article>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <dl class="teaching">
+      <dt>2026–27</dt>
+      <dd>Advanced Macroeconomics <span>· MSc in Economics and Social Sciences · TA to Antonella Trigari</span></dd>
+      <dd>Macroeconomics IV <span>· PhD in Economics · TA to Luigi Iovino</span></dd>
+
+      <dt>2025–26</dt>
+      <dd>Advanced Macroeconomics <span>· MSc in Economics and Social Sciences · TA to Antonella Trigari</span></dd>
+      <dd>International and Monetary Economics <span>· BSc in International Economics and Finance · TA to Dmitriy Sergeyev</span></dd>
+
+      <dt>2024–25</dt>
+      <dd>Advanced Macroeconomics <span>· MSc in Economics and Social Sciences · TA to Antonella Trigari</span></dd>
+      <dd>International and Monetary Economics <span>· BSc in International Economics and Finance · TA to Dmitriy Sergeyev</span></dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <address>
+      <p>Department of Economics, office 5-D2-07<br>Università Bocconi<br>Via Röntgen 1<br>20136 Milan, Italy</p>
+      <p><a href="mailto:henri.graul@phd.unibocconi.it">henri.graul@phd.unibocconi.it</a><br><a href="mailto:henri.graul@unibocconi.it">henri.graul@unibocconi.it</a></p>
+    </address>
+  </section>
+
+  <footer>Last updated September 2026.</footer>
+
+</div>
+</body>
+</html>
